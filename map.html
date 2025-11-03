@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factory Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Factory Location Map</h2>
+
+  <div>
+    <input type="number" id="lat" placeholder="Latitude">
+    <input type="number" id="lng" placeholder="Longitude">
+    <button onclick="addMarker()">Add Factory</button>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    const map = L.map('map').setView([11.5564, 104.9282], 12); // Phnom Penh as default
+
+    // Load map tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+    }).addTo(map);
+
+    // Add marker based on input
+    function addMarker() {
+      const lat = parseFloat(document.getElementById('lat').value);
+      const lng = parseFloat(document.getElementById('lng').value);
+
+      if (!isNaN(lat) && !isNaN(lng)) {
+        L.marker([lat, lng]).addTo(map)
+          .bindPopup(`Factory at (${lat}, ${lng})`)
+          .openPopup();
+        map.setView([lat, lng], 15);
+      } else {
+        alert("Please enter valid latitude and longitude!");
+      }
+    }
+  </script>
+</body>
+</html>

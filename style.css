@@ -1,0 +1,140 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6; /* Light grey background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Header/Navigation Bar Style --- */
+.admin-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    flex: 1; 
+
+}
+
+.admin-header {
+    background-color: white; /* White bar */
+    border-bottom: 1px solid #eee;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+}
+
+.role {
+    font-weight: bold;
+    color: #6c757d;
+}
+
+.user-icon {
+    font-size: 24px;
+    color: #6c757d;
+}
+
+/* --- Admin Panel Title --- */
+.admin-panel-title {
+    margin: 30px 30px 20px;
+    font-size: 1.8em;
+    font-weight: normal;
+    color: #333;
+}
+
+/* --- Dashboard Grid and Card Style --- */
+.dashboard-grid {
+    display: grid;
+    /* Create a responsive grid with a minimum card width of 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 30px 40px;
+}
+
+.dashboard-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    /* Subtle shadow like the image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2.5em;
+    color: #007bff; /* Use blue for active icons */
+    margin-bottom: 15px;
+}
+
+.card-text {
+    /* Pushes the icon to the top and text to the bottom area */
+    margin-top: auto; 
+}
+
+.khmer-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.english-text {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Placeholder/Coming Soon Styling */
+.placeholder-card .card-icon {
+    color: #6c757d; /* Grey out icons for inactive cards */
+}
+
+.status-tag {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: #dc3545; /* Red tag for 'Coming Soon' */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.admin-footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85em;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #444;
+}

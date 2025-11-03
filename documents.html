@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents | Management System</title>
+    <link rel="stylesheet" href="styles-doc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1 class="logo">Document & Factory Manager</h1>
+            <div class="user-info">
+                <span>Loeun Pheap</span>
+                <span class="role">Admin</span>
+                <i class="fas fa-user-circle user-icon"></i>
+            </div>
+        </header>
+
+        <h2 class="admin-panel-title">📄 Document Management</h2>
+
+        <main class="content-wrapper">
+            
+            <div class="controls-bar">
+                <button class="btn btn-add" onclick="showAddDocumentForm()">
+                    <i class="fas fa-plus"></i> Add New Document
+                </button>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Search documents..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+
+            <section class="data-display-section">
+                <h3>All Documents</h3>
+                <table id="documentsTable" class="data-table">
+<thead>
+        <tr>
+            <th>
+                <span class="khmer-th">លេខចូល (IR)</span>
+                <span class="english-th">Ref No.</span>
+            </th>
+            
+            <th>
+                <span class="khmer-th">អង្គភាព/ប្រភព</span>
+                <span class="english-th">Source/Factory</span>
+            </th>
+            
+            <th>
+                <span class="khmer-th">ប្រភេទឯកសារ</span>
+                <span class="english-th">Kind</span>
+            </th>
+
+            <th>
+                <span class="khmer-th">ថ្ងៃ.ខែ.ឆ្នាំទទួល</span>
+                <span class="english-th">Date Received</span>
+            </th>
+            
+            <th>
+                <span class="khmer-th">មន្រ្តីទទួលមុខការ</span>
+                <span class="english-th">Officer</span>
+            </th>
+
+            <th>
+                <span class="khmer-th">ស្ថានភាពឯកសារ</span>
+                <span class="english-th">Status</span>
+            </th>
+            
+            <th>
+                <span class="khmer-th">សកម្មភាព</span>
+                <span class="english-th">Actions</span>
+            </th>
+        </tr>
+    </thead>
+                    <tbody id="documentsTableBody">
+                        <tr>
+                            <td>L-001/25</td>
+                            <td>2025-10-31</td>
+                            <td>Official Letter</td>
+                            <td>F-105</td>
+                            <td>Sent email response.</td>
+                            <td><span class="status status-completed">Completed</span></td>
+                            <td>
+                                <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>R-549/25</td>
+                            <td>2025-10-30</td>
+                            <td>Inspection Report</td>
+                            <td>F-211</td>
+                            <td>Awaiting internal review.</td>
+                            <td><span class="status status-pending">Pending</span></td>
+                            <td>
+                                <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>N-210/25</td>
+                            <td>2025-10-25</td>
+                            <td>Notice of Action</td>
+                            <td>F-105</td>
+                            <td>Archived after sign-off.</td>
+                            <td><span class="status status-draft">Archived</span></td>
+                            <td>
+                                <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="admin-footer">
+            <p>Document Manager v1.0</p>
+            <p>Build with <span class="heart-icon">❤️</span> Gemini</p>
+        </footer>
+    </div>
+
+    <script>
+        function showAddDocumentForm() {
+            alert('Opening Form to Add New Document!');
+            // In a real app, this would show a modal or navigate to a form page.
+        }
+    </script>
+</body>
+</html>
